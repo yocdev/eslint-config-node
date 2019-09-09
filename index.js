@@ -1,21 +1,4 @@
 module.exports = {
-  "root": true,
-
-  "parserOptions": {
-    "ecmaVersion": 2017,
-    "ecmaFeatures": {
-      "impliedStrict": true,
-      "experimentalObjectRestSpread": true
-    }
-  },
-
-  "env": {
-    "es6": true,
-    "node": true,
-    "browser": true,
-    "jest": true
-  },
-
   "extends": [
     "eslint:recommended"
   ],
