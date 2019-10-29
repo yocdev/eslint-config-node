@@ -53,7 +53,6 @@ module.exports = {
     "lines-between-class-members": ["error", "always"],
     "max-depth": ["error", 6],
     "max-len": ["error", 120],
-    "new-cap": "error",
     "new-parens": "error",
     "no-multiple-empty-lines": ["error", {
       "max": 2,
