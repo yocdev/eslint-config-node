@@ -53,7 +53,6 @@ module.exports = {
     "lines-between-class-members": ["error", "always"],
     "max-depth": ["error", 4],
     "max-len": ["error", 120],
-    "max-lines-per-function": "off",
     "new-cap": "error",
     "new-parens": "error",
     "no-multiple-empty-lines": ["error", {
@@ -97,7 +96,10 @@ module.exports = {
     "prefer-const": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "template-curly-spacing": ["error", "never"]
+    "template-curly-spacing": ["error", "never"],
+
+    "require-atomic-updates": "off",
+    "max-lines-per-function": "off"
   }
 }
 
