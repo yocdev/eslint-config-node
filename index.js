@@ -15,7 +15,6 @@ module.exports = {
     'no-loop-func': 'error',
     'no-multi-spaces': 'error',
     'no-new-wrappers': 'error',
-    'no-param-reassign': 'error',
     'no-return-assign': ['error', 'except-parens'],
     'no-self-assign': 'error',
     'no-self-compare': 'error',
