@@ -32,7 +32,13 @@ module.exports = {
     "array-bracket-spacing": ["error", "never"],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs"],
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "only-multiline",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
     "comma-spacing": ["error", {
       "before": false,
       "after": true
