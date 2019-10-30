@@ -83,7 +83,6 @@ module.exports = {
       "before": false
     }],
     "template-tag-spacing": ["error", "never"],
-    "arrow-body-style": ["error", "as-needed"],
     "arrow-spacing": "error",
     "no-confusing-arrow": "error",
     "no-duplicate-imports": "error",
