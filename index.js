@@ -57,7 +57,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     'lines-between-class-members': ['error', 'always'],
     'max-depth': ['error', 6],
-    'max-len': ['error', 120],
+    'max-len': ['error', 100],
     'new-parens': 'error',
     'no-multiple-empty-lines': ['error', {
       'max': 2,
