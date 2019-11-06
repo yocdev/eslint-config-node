@@ -123,7 +123,11 @@ module.exports = {
     }],
     'padded-blocks': ['error', 'never'],
     'padding-line-between-statements': 'off',
-    'quote-props': ['error', 'as-needed'],
+    'quote-props': ['error', 'as-needed', {
+      'keywords': true,
+      'unnecessary': true,
+      'numbers': true,
+    }],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
     'sort-keys': 'off',
