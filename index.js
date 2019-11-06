@@ -5,13 +5,16 @@ module.exports = {
 
   'env': {
     // Node.js 8.15
-    // This automatically sets the ecmaVersion parser option to 8.
     'es2017': true,
     'node': true,
     'jest': true,
   },
 
   'parserOptions': {
+    // In order to use Object rest/spread features, we set the ecmaVersion to 2018.
+    // Remember that some ES 2018 features are NOT supported in Node.js 8.15.
+    // TODO: Upgrade to a newer Node.js version.
+    'ecmaVersion': 2018,
     'ecmaFeatures': {
       'impliedStrict': true,
     },
@@ -22,6 +25,7 @@ module.exports = {
     // --- Possible Errors
     'no-await-in-loop': 'off',
     'no-extra-parens': 'off',
+    'require-atomic-updates': 'off',
 
     // --- Best Practices
     'accessor-pairs': 'off',
@@ -40,6 +44,8 @@ module.exports = {
     'no-else-return': 'off',
     'no-eq-null': 'off',
     'no-implicit-globals': 'off',
+    'no-invalid-this': 'off',
+    'no-magic-numbers': 'off',
     'no-param-reassign': 'warn',
     'no-warning-comments': 'warn',
     // Only supported in ES 2018
@@ -50,6 +56,8 @@ module.exports = {
 
     // --- Variables
     'init-declarations': 'off',
+    'no-shadow': 'off',
+    'no-undefined': 'off',
 
     // --- Node.js and CommonJS
     'callback-return': 'off',
@@ -64,6 +72,7 @@ module.exports = {
     'brace-style': ['error', '1tbs', {
       'allowSingleLine': true,
     }],
+    'capitalized-comments': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'computed-property-spacing': ['error', 'never', {
       'enforceForClassMembers': true,
@@ -71,16 +80,18 @@ module.exports = {
     'func-names': 'off',
     'func-style': 'off',
     'function-call-argument-newline': 'off',
+    'function-paren-newline': 'off',
     'id-length': 'off',
     'indent': ['error', 2],
     'max-depth': ['error', 6],
     'max-len': ['error', 100],
     'max-lines': ['warn', {
-      'max': 500,
+      'max': 1000,
       'skipBlankLines': true,
       'skipComments': true,
     }],
     'max-lines-per-function': 'off',
+    'max-params': 'warn',
     'max-statements': 'off',
     'max-statements-per-line': 'off',
     'multiline-comment-style': 'off',
@@ -92,11 +103,12 @@ module.exports = {
     'no-multi-assign': 'off',
     'no-multiple-empty-lines': ['error', {
       'max': 2,
-      'maxEOF': 1,
       'maxBOF': 1,
+      'maxEOF': 0,
     }],
     'no-negated-condition': 'off',
     'no-nested-ternary': 'off',
+    'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
     'no-ternary': 'off',
     'no-underscore-dangle': 'off',
     'object-curly-spacing': ['error', 'always'],
@@ -126,6 +138,8 @@ module.exports = {
     // --- ECMAScript 6
     'arrow-parens': ['error', 'as-needed'],
     'generator-star-spacing': ['error', 'after'],
+    'prefer-const': ['error', { 'destructuring': 'all' }],
+    'prefer-destructuring': 'off',
     'prefer-template': 'off',
     'sort-imports': 'off',
   }
