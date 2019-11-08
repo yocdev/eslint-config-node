@@ -142,6 +142,7 @@ module.exports = {
     // --- ECMAScript 6
     'arrow-parens': ['error', 'as-needed'],
     'generator-star-spacing': ['error', 'after'],
+    'prefer-arrow-callback': ['error', { 'allowNamedFunctions': true }],
     'prefer-const': ['error', { 'destructuring': 'all' }],
     'prefer-destructuring': 'off',
     'prefer-template': 'off',
