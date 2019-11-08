@@ -124,7 +124,7 @@ module.exports = {
     'padded-blocks': ['error', 'never'],
     'padding-line-between-statements': 'off',
     'quote-props': ['error', 'as-needed', {
-      'keywords': true,
+      'keywords': false,
       'unnecessary': true,
       'numbers': true,
     }],
