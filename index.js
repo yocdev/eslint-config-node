@@ -58,7 +58,7 @@ module.exports = {
     'init-declarations': 'off',
     'no-shadow': 'off',
     'no-undefined': 'off',
-    'no-use-before-define': 'nofunc',
+    'no-use-before-define': ['error', 'nofunc'],
 
     // --- Node.js and CommonJS
     'callback-return': 'off',
