@@ -131,6 +131,7 @@ module.exports = {
     }],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
+    'semi-style': ['error', 'first'],
     'sort-keys': 'off',
     'sort-vars': 'off',
     'space-before-function-paren': ['error', {
