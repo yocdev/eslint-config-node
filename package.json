@@ -1,9 +1,24 @@
 {
-  "name": "eslint-config-yoc-node",
+  "name": "@yocdev/eslint-config-node",
   "version": "1.0.0",
+  "description": "eslint-config for YOC Node.js projects.",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yocdev/eslint-config-node.git"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "node"
+  ],
+  "author": "npm@youchai.me",
   "license": "MIT",
-  "peerDependencies": {
-    "eslint": ">= 6"
-  }
+  "bugs": {
+    "url": "https://github.com/yocdev/eslint-config-node/issues"
+  },
+  "homepage": "https://github.com/yocdev/eslint-config-node#readme"
 }
