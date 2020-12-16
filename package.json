@@ -1,6 +1,6 @@
 {
   "name": "@yocdev/eslint-config-node",
-  "version": "1.0.0",
+  "version": "14.0.0",
   "description": "eslint-config for YOC Node.js projects.",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/yocdev/eslint-config-node/issues"
   },
-  "homepage": "https://github.com/yocdev/eslint-config-node#readme"
+  "homepage": "https://github.com/yocdev/eslint-config-node#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "4.10.0",
+    "@typescript-eslint/parser": "4.10.0",
+    "eslint-plugin-node": "11.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 7"
+  }
 }

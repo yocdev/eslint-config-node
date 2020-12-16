@@ -1,22 +1,29 @@
 module.exports = {
-  'extends': [
-    'eslint:all',
-  ],
+  'parserOptions': {
+    // BUG?: Setting `env.es2020` to true did not automatically
+    // set the ecmaVersion parser option to 2020. eslint bug?
+    //
+    // Node.js 14+
+    'ecmaVersion': 2020,
+    'ecmaFeatures': {
+      'impliedStrict': true,
+    },
+  },
 
   'env': {
-    // Node.js 8.15
-    'es2017': true,
+    'es2020': true,
     'node': true,
     'jest': true,
   },
 
-  'parserOptions': {
-    // In order to use Object rest/spread features, we set the ecmaVersion to 2018.
-    // Remember that some ES 2018 features are NOT supported in Node.js 8.15.
-    // TODO: Upgrade to a newer Node.js version.
-    'ecmaVersion': 2018,
-    'ecmaFeatures': {
-      'impliedStrict': true,
+  'extends': [
+    'eslint:all',
+    'plugin:node/recommended-script',
+  ],
+
+  'settings': {
+    'node': {
+      'tryExtensions': ['.js', '.json', '.node', '.ts'],
     },
   },
 
@@ -25,6 +32,7 @@ module.exports = {
     // --- Possible Errors
     'no-await-in-loop': 'off',
     'no-extra-parens': 'off',
+    'no-promise-executor-return': 'off',
     'require-atomic-updates': 'off',
 
     // --- Best Practices
@@ -48,7 +56,6 @@ module.exports = {
     'no-magic-numbers': 'off',
     'no-param-reassign': 'warn',
     'no-warning-comments': 'warn',
-    // Only supported in ES 2018
     'prefer-named-capture-group': 'off',
     'require-unicode-regexp': 'off',
     'vars-on-top': 'off',
@@ -59,13 +66,6 @@ module.exports = {
     'no-shadow': 'off',
     'no-undefined': 'off',
     'no-use-before-define': ['error', 'nofunc'],
-
-    // --- Node.js and CommonJS
-    'callback-return': 'off',
-    'global-require': 'off',
-    'no-process-env': 'off',
-    'no-process-exit': 'off',
-    'no-sync': 'off',
 
     // --- Stylistic Issues
     'array-bracket-newline': ['error', 'consistent'],
@@ -149,5 +149,37 @@ module.exports = {
     'prefer-destructuring': 'off',
     'prefer-template': 'off',
     'sort-imports': 'off',
-  }
+
+
+    // --- eslint-plugin-node
+    'node/callback-return': 'off',
+    'node/global-require': 'off',
+    'node/no-deprecated-api': 'warn',
+    'node/no-process-env': 'off',
+    'node/no-process-exit': 'off',
+    'node/no-sync': 'off',
+    'node/no-unpublished-require': 'off',
+  },
+
+
+  // TypeScript
+  'overrides': [{
+    'files': ['*.ts'],
+
+    'parser': '@typescript-eslint/parser',
+
+    'plugins': [
+      '@typescript-eslint',
+    ],
+
+    'extends': [
+      'plugin:node/recommended-module',
+      'plugin:@typescript-eslint/recommended',
+    ],
+
+    'rules': {
+      // --- eslint-plugin-node
+      'node/no-unpublished-import': 'off',
+    },
+  }],
 }
